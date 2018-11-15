@@ -1,11 +1,13 @@
 <template>
   <div class="container">
-    <bannerSwiper :imgUrls="imgUrls" />  
+    <banner-swiper :imgUrls="imgUrls" />  
+    <nav-bar/>
   </div>
 </template>
 
 <script>
 import bannerSwiper from '@/components/swiper/swiper'
+import NavBar from '@/components/nav/nav'
 
 export default {
   data () {
@@ -21,7 +23,7 @@ export default {
   },
 
   components: {
-   bannerSwiper
+   bannerSwiper,NavBar
   },
 
   methods: {

@@ -1,5 +1,5 @@
 <template>
-  <swiper indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval" :duration="duration" class="banner-swiper">
+  <swiper :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval" :duration="duration" class="banner-swiper">
     <block v-for="(item,index) in imgUrls" :key="index">
       <swiper-item>
         <img :src="item" class="slide-image" width="355" height="150" />
@@ -10,10 +10,9 @@
 <script>
   export default {
     props: ["imgUrls"],
-
     data() {
       return {
-        indicatorDots: false,
+        indicatorDots: true,
         autoplay: false,
         interval: 5000,
         duration: 500
